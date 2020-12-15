@@ -1,6 +1,7 @@
 package pl.krysinski;
 
 import pl.krysinski.model.User;
+import pl.krysinski.utils.Reader;
 
 import java.io.IOException;
 import java.util.List;

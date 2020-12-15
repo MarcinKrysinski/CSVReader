@@ -1,4 +1,4 @@
-package pl.krysinski;
+package pl.krysinski.utils;
 
 import pl.krysinski.model.Gender;
 import pl.krysinski.model.User;
@@ -14,7 +14,7 @@ import java.util.List;
 public class Reader {
 
     public List<User> readData() throws IOException {
-        String file = "src/main/java/pl/krysinski/USERS_DATA.csv";
+        String file = "src/main/java/pl/krysinski/files/USERS_DATA.csv";
         List<User> content = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String[] headers = br.readLine().split(",");
