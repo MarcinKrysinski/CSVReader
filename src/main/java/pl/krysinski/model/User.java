@@ -1,4 +1,4 @@
-package pl.krysinski;
+package pl.krysinski.model;
 
 public class User {
 
@@ -6,13 +6,13 @@ public class User {
     private String first_name;
     private String last_name;
     private String email;
-    private String gender;
+    private Gender gender;
     private String ip_address;
 
     public User() {
     }
 
-    public User(String id, String first_name, String last_name, String email, String gender, String ip_address) {
+    public User(String id, String first_name, String last_name, String email, Gender gender, String ip_address) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -53,11 +53,11 @@ public class User {
         this.email = email;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -76,7 +76,7 @@ public class User {
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", email='" + email + '\'' +
-                ", gender='" + gender + '\'' +
+                ", gender=" + gender +
                 ", ip_address='" + ip_address + '\'' +
                 '}';
     }
