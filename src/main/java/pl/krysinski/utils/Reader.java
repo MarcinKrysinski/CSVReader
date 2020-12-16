@@ -30,26 +30,26 @@ public class Reader {
         return content;
     }
 
-    private User createUser(String[] headers, String[] tokens) {
+    private User createUser(String[] headers, String[] value) {
         User user = new User();
-        for (int h = 0; h < headers.length; h++) {
-            if ("id".equals(headers[h])) {
-                user.setId(tokens[h]);
+        for (int i = 0; i < headers.length; i++) {
+            if (headers[i].equals("id")) {
+                user.setId(value[i]);
             }
-            if ("first_name".equals(headers[h])) {
-                user.setFirst_name(tokens[h]);
+            if (headers[i].equals("first_name")) {
+                user.setFirst_name(value[i]);
             }
-            if ("last_name".equals(headers[h])) {
-                user.setLast_name(tokens[h]);
+            if (headers[i].equals("last_name")) {
+                user.setLast_name(value[i]);
             }
-            if ("email".equals(headers[h])) {
-                user.setEmail(tokens[h]);
+            if (headers[i].equals("email")) {
+                user.setEmail(value[i]);
             }
-            if ("gender".equals(headers[h])) {
-                user.setGender(Gender.valueOf(tokens[h]));
+            if (headers[i].equals("gender")) {
+                user.setGender(Gender.valueOf(value[i]));
             }
-            if ("ip_address;;".equals(headers[h])) {
-                String ip_address = tokens[h];
+            if (headers[i].equals("ip_address")) {
+                String ip_address = value[i];
                 user.setIp_address(ip_address.substring(0, ip_address.length() - 2));
             }
         }
